@@ -36,7 +36,6 @@ export async function Navbar() {
             <Link
               href="https://cv.drjvtlkr.com"
               target="_blank"
-              legacyBehavior
               passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               <span className="text-xl text-gray-500 hover:text-black">Resume</span>
