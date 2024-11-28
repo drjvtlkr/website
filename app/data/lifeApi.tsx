@@ -28,7 +28,7 @@ export type Project = {
   description: string;
   logo: any;
   link?: {
-    label?: string;
+    label: string;
     href: string;
   };
 };
@@ -93,6 +93,7 @@ export const MyPastProjects: Project[] = [
       "Admin web application for Dhongadi Waters to manage orders, track revenue, and oversee daily business operations seamlessly.",
     logo: dhongadiLogo,
     link: {
+      label:"Dhongadi Alkaline waters",
       href: "https://alkaline-admin.vercel.app/",
     },
   },
