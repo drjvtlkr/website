@@ -9,6 +9,7 @@ import edmentorLogo from "../../images/edmentor.png";
 import orbitLogo from "../../images/orbit.png";
 import docyardbgLogo from "../../images/docyardbg.png";
 import { FaLinkedin } from "react-icons/fa";
+import { StaticImageData } from 'next/image'; 
 
 export const Name = "Bartosz Jarocki";
 
@@ -26,7 +27,7 @@ export type Project = {
   title: string;
   techStack: string[];
   description: string;
-  logo: any;
+  logo: StaticImageData;
   link?: {
     label: string;
     href: string;
