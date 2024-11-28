@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Roboto } from "@next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+// This is to import the font styles
+const roboto = Roboto({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -25,14 +21,37 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Check if window is available to ensure client-side only execution
+  if (typeof window !== "undefined") {
+    // Wait until the document is fully loaded before adding the event listeners
+    window.onload = () => {
+      const cursorDot = document.querySelector("[data-cursor-dot]") as HTMLElement;
+      const cursorOutline = document.querySelector("[data-cursor-outline]") as HTMLElement;
+
+      if (cursorDot && cursorOutline) {
+        // Set up the mousemove event listener
+        window.addEventListener("mousemove", (e) => {
+          const posX = e.clientX;
+          const posY = e.clientY;
+
+          cursorDot.style.left = `${posX}px`;
+          cursorDot.style.top = `${posY}px`;
+
+          cursorOutline.style.left = `${posX}px`;
+          cursorOutline.style.top = `${posY}px`;
+        });
+      }
+    };
+  }
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar/>
+      <body className={`${roboto.className} antialiased`}>
+        <div className="cursor-dot" data-cursor-dot></div>
+        <div className="cursor-outline" data-cursor-outline></div>
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
