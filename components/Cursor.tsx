@@ -33,11 +33,11 @@ const Cursor = () => {
     };
 
     const onWindowBlur =()=>{
-        gsap.to(cursor, {duration:cursorTransitionDuration, x:centerX, y:centerY,ease:"power2.out"})
+        gsap.to(cursor, {scale:4, duration:cursorTransitionDuration, x:centerX, y:centerY,ease:"power2.out"})
     }
 
     const onWindowFocus = ()=>{
-        gsap.to(cursor,{duration:cursorTransitionDuration, scale:1, ease:"power2.out"})
+        gsap.to(cursor,{duration:cursorTransitionDuration, scale: 4, ease:"power2.out"})
     }
 
     document.addEventListener("mousemove", onMouseMove);

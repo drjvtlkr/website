@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
-  transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
 
 link,a{
