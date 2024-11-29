@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import Cursor from "@/components/Cursor";
 
 // This is to import the font styles
 const roboto = Roboto({
@@ -47,8 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} antialiased`}>
-        <div className="cursor-dot" data-cursor-dot></div>
-        <div className="cursor-outline" data-cursor-outline></div>
+        <Cursor/>
         <Navbar />
         {children}
         <Footer />
