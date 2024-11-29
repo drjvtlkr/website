@@ -8,19 +8,33 @@ import depandaLogo from "../../images/depanda.png";
 import edmentorLogo from "../../images/edmentor.png";
 import orbitLogo from "../../images/orbit.png";
 import docyardbgLogo from "../../images/docyardbg.png";
+import githubLogo from "../../images/github.png";
+import founderslistLogo from "../../images/founderslist.png";
 import { FaLinkedin } from "react-icons/fa";
-import { StaticImageData } from 'next/image'; 
+import { StaticImageData } from "next/image";
+import { GoMail } from "react-icons/go";
 
-export const Name = "Bartosz Jarocki";
+export const Name = "Dheeraj Vithalkar";
 
 export const About = (
   <>
     {`I used to consider myself a software engineer, but the reality is that I simply enjoy creating things. If you'd like to get in touch,`}{" "}
     <ExternalLink href="mailto:dheeraj@drjvtlkr.com">
       send me an email.
+      <GoMail />
     </ExternalLink>
   </>
 );
+
+export const Meeting = (
+  <>
+    {`or Schedule a call with me`}{" "}
+    <ExternalLink href="https://calendly.com/dheerajrvithalkar/30min">
+      Here
+    </ExternalLink>
+  </>
+);
+
 export const AboutExtended = `I live in Bengaluru, India, having grown up in the small city of Hubli. I have a bachelor's degree in Computer Science and Engineering from SDM College Of Engineering and Technology. I like Programming, Video Editing, Social Media Management and travelling across my country India. The cosmos fascinates me, and I take great delight in gazing at the stars.`;
 
 export type Project = {
@@ -43,7 +57,7 @@ export const MyCurrentProjects: Project[] = [
     logo: logoLgLogo,
     link: {
       label: "github.com",
-      href: "https://github.com/BartoszJarocki/web-jarocki-me",
+      href: "https://github.com/drjvtlkr/website",
     },
   },
   {
@@ -56,11 +70,108 @@ export const MyCurrentProjects: Project[] = [
       href: "https://cv.drjvtlkr.com",
     },
   },
+  {
+    title: "Founderslist.",
+    techStack: [" Personal Project", "Next.js", "From Scratch"],
+    description: "One stop shop of Gen-Z founders.",
+    logo: founderslistLogo,
+    link: {
+      label: "Founderslist",
+      href: "https://github.com/drjvtlkr/FoundersList",
+    },
+  },
+  {
+    title: "Redis DB",
+    techStack: [" Personal Project", "Golang", "Database Architecture"],
+    description: "Clone of wellknown DataBase RedisDB.",
+    logo: githubLogo,
+    link: {
+      label: "redis clone",
+      href: "https://github.com/drjvtlkr/redis-clone",
+    },
+  },
+  {
+    title: "Google Docs",
+    techStack: [" Personal Project", "Next JS", "Realtime"],
+    description:
+      "Google docs a very popular office suite built in couple of days.",
+    logo: githubLogo,
+    link: {
+      label: "Google Docs Clone",
+      href: "https://github.com/drjvtlkr/nextdocs",
+    },
+  },
+  {
+    title: "Simple Loadbalancer",
+    techStack: [" Personal Project", "Golang", "System Architecture"],
+    description: "A simple loadbalancer to redirect traffic in a network.",
+    logo: githubLogo,
+    link: {
+      label: "Loadbalancer",
+      href: "https://github.com/drjvtlkr/loadbalancer-golang",
+    },
+  },
+  {
+    title: "HTTP Tunnel",
+    techStack: [
+      " Personal Project",
+      "Golang",
+      "System Architecture",
+      "Low-Level Design",
+    ],
+    description: "A HTTP tunnel to share files over a network.",
+    logo: githubLogo,
+    link: {
+      label: "HTTP Tunnel",
+      href: "https://github.com/drjvtlkr/httptunnel",
+    },
+  },
+  {
+    title: "CRUD Application",
+    techStack: [" Personal Project", "Golang", "RESTful API"],
+    description: "A simple CRUD application using Golang.",
+    logo: githubLogo,
+    link: {
+      label: "CRUD App",
+      href: "https://github.com/drjvtlkr/CRUD-golang",
+    },
+  },
+  {
+    title: "Go-Proxy Server",
+    techStack: [" Personal Project", "Golang", "Low-Level Design"],
+    description: "A Proxy server written in Golang.",
+    logo: githubLogo,
+    link: {
+      label: "Proxy Server",
+      href: "https://github.com/drjvtlkr/proxy-go",
+    },
+  },
+  {
+    title: "Go TCP Server",
+    techStack: [" Personal Project", "Golang", "Low-Level Design"],
+    description: "A TCP server written in Golang.",
+    logo: githubLogo,
+    link: {
+      label: "TCP Server",
+      href: "https://github.com/drjvtlkr/TcpServer-go",
+    },
+  },
+  {
+    title: "TCP Fileshare",
+    techStack: [" Personal Project", "Golang", "Low-Level Design"],
+    description:
+      "A TCP server written in Golang to sahre files using TCP protocol.",
+    logo: githubLogo,
+    link: {
+      label: "TCP Fileshare",
+      href: "https://github.com/drjvtlkr/GO-TCPFileShare",
+    },
+  },
 ];
 
 export const MyPastProjects: Project[] = [
   {
-    title: "NeoDeals",
+    title: "NeoDeals(DePanda)",
     techStack: ["Project", "JavaScript", "React.js", "Tailwind CSS"],
     description: "A new age neo e-commerce web application.",
     logo: depandaLogo,
@@ -80,6 +191,9 @@ export const MyPastProjects: Project[] = [
       href: "https://theedmentor.com/",
     },
   },
+];
+
+export const MyFreelanceProjects: Project[] = [
   {
     title: "Dhongadi Alkaline Waters",
     techStack: [
@@ -94,7 +208,7 @@ export const MyPastProjects: Project[] = [
       "Admin web application for Dhongadi Waters to manage orders, track revenue, and oversee daily business operations seamlessly.",
     logo: dhongadiLogo,
     link: {
-      label:"Dhongadi Alkaline waters",
+      label: "Dhongadi Alkaline waters",
       href: "https://alkaline-admin.vercel.app/",
     },
   },
