@@ -1,6 +1,7 @@
 import { ExternalLink } from "../../components/ExternalLink";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { SiGooglemeet } from "react-icons/si";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import dhongadiLogo from "../../images/dhongadi.jpg";
 import logoLgLogo from "../../images/logoLg.png";
@@ -17,24 +18,18 @@ export const Name = "Dheeraj Vithalkar";
 
 export const About = (
   <>
-    <h1>
-      Hello, I'm Dheeraj Vithalkar, and this is a brief introduction about me. I love
-      coding, designing, and exploring new technologies. I used to consider
-      myself a software engineer, but the reality is that I simply enjoy
-      creating things. If you'd like to get in touch,
-      <a href="mailto:dheeraj@drjvtlkr.com">
-        {" "}
-        send me an <span className="underline">email</span>.
-      </a>
-    </h1>
+    {`I used to consider myself a software engineer, but the reality is that I simply enjoy creating things. If you'd like to get in touch,`}{" "}
+    <ExternalLink href="mailto:dheeraj@drjvtlkr.com">
+      send me an email.
+    </ExternalLink>
   </>
 );
 
 export const Meeting = (
   <>
-    {`or Schedule a call with me`}{" "}
+    {`Schedule a call with me`}{" "}
     <ExternalLink href="https://calendly.com/dheerajrvithalkar/30min">
-      Here
+      <SiGooglemeet/>
     </ExternalLink>
   </>
 );
@@ -247,7 +242,7 @@ export const Work = [
   },
   {
     company: "Docyard Labs",
-    title: "Lead Full Stack Developer",
+    title: "Principal Full Stack Developer",
     logo: docyardbgLogo,
     start: "June 2024",
     end: "Present",

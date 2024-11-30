@@ -1,9 +1,10 @@
 "use client";
 import { Container } from "@/components/Container";
 import Image from "next/image";
-import { About, Name } from "./data/lifeApi";
+import { About, Meeting, Name } from "./data/lifeApi";
 import Work from "@/components/Work";
 import { Resume } from "@/components/Resume";
+
 
 const Home = () => {
   return (
@@ -27,7 +28,7 @@ const Home = () => {
             </div>
           </div>
           <div className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed animate-fadeInLeft">
-            <div className="px-4 sm:px-8 md:px-12 lg:px-16">{About}</div>
+            <div className="px-4 sm:px-8 md:px-12 lg:px-16">{About}<br/>or<br/>{Meeting}</div>
           </div>
         </div>
 
