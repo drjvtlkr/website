@@ -1,92 +1,44 @@
 "use client";
 import { Container } from "@/components/Container";
 import Image from "next/image";
-import React, { useEffect, useState, useRef } from "react";
-import Typed from "typed.js";
 import { About, Name } from "./data/lifeApi";
-import OfficialProjects from "@/components/OfficialProjects";
-import PersonalProjects from "@/components/PersonalProjects";
-import FreelanceProjects from "@/components/FreelanceProjects";
+import Work from "@/components/Work";
+import { Resume } from "@/components/Resume";
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadingScreenHeight, setLoadingScreenHeight] = useState("100%");
-
-  const typedElement = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    if (typedElement.current) {
-      new Typed(typedElement.current, {
-        strings: [
-          "Dheeraj Vithalkar",
-          "Software Engineer",
-          "Fullstack Engineer",
-          "Product Engineer",
-        ],
-        typeSpeed: 30,
-        backSpeed: 25,
-        backDelay: 10,
-        loop: false,
-        onComplete: () => {
-          setTimeout(() => {
-            setLoadingScreenHeight("0%");
-            setTimeout(() => setIsLoading(false), 500);
-          }, 500);
-        },
-      });
-    }
-  }, []);
-
   return (
-    <>
-      {isLoading && (
-        <div
-          className={`fixed top-0 left-0 w-full h-full bg-black flex items-center justify-center z-50 transition-all duration-500`}
-          style={{
-            zIndex: 9999,
-            height: loadingScreenHeight,
-          }}>
-          <h1 className="text-4xl text-white font-bold">
-            <span ref={typedElement}></span>
-          </h1>
-        </div>
-      )}
-
-      {!isLoading && (
-        <Container className="mt-16 sm:mt-32 text-gray-600 transition-opacity duration-100">
-          <div className="mx-auto max-w-7xl lg:px-8 bg-gray-50 border p-10 rounded-xl">
-            <h1 className="text-7xl float-start">
-              I am <br />
-              <span className="text-8xl">{Name}</span>
-            </h1>
-            <div className="gird grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-              <div className="lg:pl-20">
-                <div className="max-w-xs px-2.5 lg:max-w-none">
-                  <Image
-                    src="https://avatars.githubusercontent.com/drjvtlkr"
-                    alt="Dheeraj Image"
-                    sizes="(min-width: 1024px) 32rem, 20rem"
-                    width={400}
-                    height={400}
-                    className="aspect-square rounded-full bg-zinc-100 object-cover dark:bg-zinc-800"
-                  />
-                </div>
-              </div>
-            </div>
-            {About}
-            <div>
-              <OfficialProjects />
-            </div>
-            <div>
-              <PersonalProjects />
-            </div>
-            <div>
-              <FreelanceProjects />
+    <Container className="mt-8 sm:mt-16 md:mt-24 lg:mt-32 text-gray-600 transition-opacity duration-100">
+      <div className="mx-auto max-w-4xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl lg:px-8 bg-gray-50 border p-6 sm:p-8 md:p-10 rounded-xl">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-center mb-6 sm:mb-8">
+          I am <br />
+          <span className="text-gray-600">{Name}</span>
+        </h1>
+        <div className="grid grid-cols-1 gap-y-8 md:gap-y-12 lg:grid-cols-2 lg:items-center lg:gap-x-16">
+          <div className="flex justify-center animate-fadeInRight">
+            <div className="w-48 sm:w-36 md:w-48 lg:w-56 xl:w-64 rounded-full overflow-hidden">
+              <Image
+                src="https://avatars.githubusercontent.com/drjvtlkr"
+                alt="Dheeraj Image"
+                sizes="(min-width: 1024px) 32rem, 20rem"
+                width={400}
+                height={400}
+                className="aspect-square object-cover"
+              />
             </div>
           </div>
-        </Container>
-      )}
-    </>
+          <div className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed animate-fadeInLeft">
+            <div className="px-4 sm:px-8 md:px-12 lg:px-16">{About}</div>
+          </div>
+        </div>
+
+        <div className="flex justify-center mt-8 sm:mt-10 md:mt-12 lg:mt-16">
+          <Resume />
+        </div>
+        <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-16">
+          <Work />
+        </div>
+      </div>
+    </Container>
   );
 };
 

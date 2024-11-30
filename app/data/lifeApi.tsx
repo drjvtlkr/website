@@ -12,17 +12,21 @@ import githubLogo from "../../images/github.png";
 import founderslistLogo from "../../images/founderslist.png";
 import { FaLinkedin } from "react-icons/fa";
 import { StaticImageData } from "next/image";
-import { GoMail } from "react-icons/go";
 
 export const Name = "Dheeraj Vithalkar";
 
 export const About = (
   <>
-    {`I used to consider myself a software engineer, but the reality is that I simply enjoy creating things. If you'd like to get in touch,`}{" "}
-    <ExternalLink href="mailto:dheeraj@drjvtlkr.com">
-      send me an email.
-      <GoMail />
-    </ExternalLink>
+    <h1>
+      Hello, I'm {Name}, and this is a brief introduction about me. I love
+      coding, designing, and exploring new technologies. I used to consider
+      myself a software engineer, but the reality is that I simply enjoy
+      creating things. If you'd like to get in touch,
+      <a href="mailto:dheeraj@drjvtlkr.com">
+        {" "}
+        send me an <span className="underline">email</span>.
+      </a>
+    </h1>
   </>
 );
 
@@ -35,7 +39,7 @@ export const Meeting = (
   </>
 );
 
-export const AboutExtended = `I live in Bengaluru, India, having grown up in the small city of Hubli. I have a bachelor's degree in Computer Science and Engineering from SDM College Of Engineering and Technology. I like Programming, Video Editing, Social Media Management and travelling across my country India. The cosmos fascinates me, and I take great delight in gazing at the stars.`;
+export const AboutExtended = `I live in Hubli, India, having grown up in the small city of Hubli-Dharwad. I have a bachelor's degree in Computer Science and Engineering from SDM College Of Engineering and Technology. I like Programming, Video Editing, Social Media Management and travelling across my country India. The cosmos fascinates me, and I take great delight in gazing at the stars.`;
 
 export type Project = {
   title: string;
@@ -238,8 +242,8 @@ export const Work = [
     company: "Orbit Technologys",
     title: "Full Stack Developer",
     logo: orbitLogo,
-    start: "September 2023",
-    end: "November 2024",
+    start: "August 2023",
+    end: "Present",
   },
   {
     company: "Docyard Labs",

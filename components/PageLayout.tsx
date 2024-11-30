@@ -1,13 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import { Container } from './Container';
+import { Container } from "./Container";
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   intro: string;
 }
 
-export const PageLayout = ({ title, intro, children, ...rest }: React.PropsWithChildren<Props>) => {
+export const PageLayout = ({
+  title,
+  intro,
+  children,
+  ...rest
+}: React.PropsWithChildren<Props>) => {
   return (
     <Container className="mt-16 sm:mt-32 " {...rest}>
       <header className="max-w-3xl">
