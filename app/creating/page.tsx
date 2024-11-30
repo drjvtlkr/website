@@ -30,7 +30,9 @@ const Home = () => {
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback, { threshold: 0.1 });
+    const observer = new IntersectionObserver(observerCallback, {
+      threshold: 0.1,
+    });
 
     if (officialRef.current) observer.observe(officialRef.current);
     if (personalRef.current) observer.observe(personalRef.current);
@@ -58,7 +60,7 @@ const Home = () => {
             </div>
           </div>
           <div className="lg:order-first lg:row-span-2">
-            <h1 className="text-8xl sm:text-6xl md:text-7xl lg:text-8xl m-4 sm:m-6 md:m-8">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl text-center mb-6 sm:mb-8">
               I am <br />
               <span className="text-gray-600">{Name}</span>
             </h1>
@@ -71,8 +73,7 @@ const Home = () => {
             visibleSections.official
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
-          }`}
-        >
+          }`}>
           <OfficialProjects />
         </div>
         <div
@@ -82,8 +83,7 @@ const Home = () => {
             visibleSections.personal
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
-          }`}
-        >
+          }`}>
           <PersonalProjects />
         </div>
         <div
@@ -93,8 +93,7 @@ const Home = () => {
             visibleSections.freelance
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
-          }`}
-        >
+          }`}>
           <FreelanceProjects />
         </div>
       </div>
