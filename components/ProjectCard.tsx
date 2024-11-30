@@ -35,10 +35,9 @@ export const ProjectCard = ({ project }: Props) => {
       </p>
       <div className="relative z-10 mt-auto flex text-xs font-medium text-zinc-400 transition group-hover:text-primary dark:text-zinc-200">
         {project.link ? (
-          <p className="flex items-center">
+          <p className="flex items-center space-x-1">
             <FaLink className="h-3 w-3 flex-none" />
             <span className="ml-2">{project.link.label}</span>
-            <span className="ml-2 rounded-full bg-green-700 w-1 h-1" />
           </p>
         ) : (
           <p className="text-zinc-400 flex items-center gap-x-2">
