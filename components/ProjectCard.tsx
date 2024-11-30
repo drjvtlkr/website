@@ -33,10 +33,10 @@ export const ProjectCard = ({ project }: Props) => {
           <Badge key={techStackItem}>{techStackItem}</Badge>
         ))}
       </p>
-      <div className="relative z-10 mt-auto flex text-sm font-medium text-zinc-400 transition group-hover:text-primary dark:text-zinc-200">
+      <div className="relative z-10 mt-auto flex text-xs font-medium text-zinc-400 transition group-hover:text-primary dark:text-zinc-200">
         {project.link ? (
           <p className="flex items-center">
-            <FaLink className="h-6 w-6 flex-none" />
+            <FaLink className="h-3 w-3 flex-none" />
             <span className="ml-2">{project.link.label}</span>
             <span className="ml-2 rounded-full bg-green-700 w-1 h-1" />
           </p>

@@ -96,7 +96,7 @@ export const MyCurrentProjects: Project[] = [
       "Google docs a very popular office suite built in couple of days.",
     logo: githubLogo,
     link: {
-      label: "Google Docs Clone",
+      label: "Google Docs",
       href: "https://github.com/drjvtlkr/nextdocs",
     },
   },
@@ -170,13 +170,13 @@ export const MyCurrentProjects: Project[] = [
 
 export const MyPastProjects: Project[] = [
   {
-    title: "NeoDeals(DePanda)",
+    title: "DePanda",
     techStack: ["Project", "JavaScript", "React.js", "Tailwind CSS"],
     description: "A new age neo e-commerce web application.",
     logo: depandaLogo,
     link: {
-      label: "neodeals.in",
-      href: "https://neodeals.in",
+      label: "depanda.in",
+      href: "http://depanda.in/",
     },
   },
   {
@@ -224,7 +224,10 @@ export const SocialMedia = [
     link: "https://www.instagram.com/drjvtlkr/",
     icon: FaInstagram,
   },
-  { name: "Github", link: "https://github.com/drjvtlkr", icon: FaGithub },
+  { 
+    name: "Github", 
+    link: "https://github.com/drjvtlkr", 
+    icon: FaGithub },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/drjvtlkr",
@@ -242,33 +245,10 @@ export const Work = [
   },
   {
     company: "Docyard Labs",
-    title: "Principal Full Stack Developer",
+    title: "Freelance Full Stack Developer",
     logo: docyardbgLogo,
     start: "June 2024",
     end: "Present",
-  },
-] as const;
-
-export const CompaniesLinks = [
-  {
-    name: "VisionMedia",
-    link: "https://www.visionmedia.com/",
-  },
-  {
-    name: "DKMS",
-    link: "https://www.dkms.org/en",
-  },
-  {
-    name: "AAA",
-    link: "https://www.aaa.com/",
-  },
-  {
-    name: "PolskaPress",
-    link: "https://polskapress.pl/pl",
-  },
-  {
-    name: "Canal Digital",
-    link: "https://www.canaldigital.no/",
   },
 ] as const;
 
@@ -437,91 +417,3 @@ export const Quotes = [
     author: "― Seneca",
   },
 ] as const;
-
-export const Tools = {
-  Workstation: [
-    {
-      title: "14” MacBook Pro, M1 Max, 32GB RAM (2021)",
-      description:
-        "This laptop is a top-of-the-line machine that can handle virtually any task you throw at it, making it a worthwhile investment for anyone looking for a reliable and powerful laptop that can be used for years.",
-      href: "https://amzn.to/3XkWxhF",
-    },
-    {
-      title: "Apple Studio Display 5K (Standard Glass)",
-      description:
-        "5K resolution helps to reduce strain on the eyes and makes it more comfortable to work for long periods of time. Not to mention that it looks great.",
-      href: "https://amzn.to/3NnMlAu",
-    },
-    {
-      title: "Logitech MX Keys Mini",
-      description:
-        "Backlit keys, compact design, good battery life and a great typing experience. Matches the space gray color of the laptop almost perfectly.",
-      href: "https://amzn.to/3qSUNQS",
-    },
-    {
-      title: "Logitech MX Master 3",
-      description:
-        "Let's be honest, it just looks great with MX Keys Mini keyboard.",
-      href: "https://amzn.to/3qXIvXl",
-    },
-    {
-      title: "Apple Magic Trackpad",
-      description:
-        "Gestures, taps and swipes are something I miss when I work with my laptop closed.",
-      href: "https://amzn.to/3pgETza",
-    },
-    {
-      title: "Apple Magic Mouse",
-      description:
-        "Because it looks great and it allows me to post pictures with how badly the charging port is designed.",
-      href: "https://amzn.to/43UuA30",
-    },
-    {
-      title: "Autonomous ErgoChair Pro",
-      description: `If I'm going to slouch in the worst ergonomic position imaginable all day, I might as well do it in an expensive chair.`,
-      href: "https://www.autonomous.ai/office-chairs/ergonomic-chair",
-    },
-  ],
-  Software: [
-    {
-      title: "Visual Studio Code",
-      description: `I still miss WebStorm but at least VS Code does not consume 1000% CPU when I open it. And to be fair, it's a great editor.`,
-      href: "https://code.visualstudio.com/",
-    },
-    {
-      title: "iTerm2",
-      description: `I'm honestly not even sure what features I get with this that aren't just part of the macOS Terminal but it's what I use.`,
-      href: "https://iterm2.com/",
-    },
-    {
-      title: "TablePlus",
-      description: `Great software for working with databases. Has saved me from building about a thousand admin interfaces for my various projects over the years.`,
-      href: "https://tableplus.com/",
-    },
-    {
-      title: "Figma",
-      description: `I'm not a designer but it allows me to quickly mock up interfaces and play with my ideas. One day I'll learn how to use it properly.`,
-      href: "https://www.figma.com/",
-    },
-    {
-      title: "Notion",
-      description: `I use it for everything. I have a separate workspace for each of my projects and I use it to keep track of my tasks, notes, and ideas.`,
-      href: "https://www.notion.so/",
-    },
-    {
-      title: "Raycast",
-      description: `Window management, quick access to my most used apps, and a bunch of other useful features. I use it every day.`,
-      href: "https://www.raycast.com/",
-    },
-    {
-      title: "1Password",
-      description: `Not much to say here. It's a great password manager.`,
-      href: "https://1password.com/",
-    },
-    {
-      title: "Cron",
-      description: `Calendar application done right`,
-      href: "https://cron.com/",
-    },
-  ],
-} as const;
