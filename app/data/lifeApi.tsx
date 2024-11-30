@@ -18,7 +18,7 @@ export const Name = "Dheeraj Vithalkar";
 export const About = (
   <>
     <h1>
-      Hello, I'm {Name}, and this is a brief introduction about me. I love
+      Hello, I'm Dheeraj Vithalkar, and this is a brief introduction about me. I love
       coding, designing, and exploring new technologies. I used to consider
       myself a software engineer, but the reality is that I simply enjoy
       creating things. If you'd like to get in touch,
