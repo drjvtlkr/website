@@ -18,7 +18,7 @@ export function Navbar() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="flex justify-center mt-8 -mb-10 ">
+    <nav className="flex justify-center mt-8 -mb-4">
       <div className="bg-white shadow-md rounded-full p-1">
         <NavigationMenu>
           <NavigationMenuList className="flex gap-0">
