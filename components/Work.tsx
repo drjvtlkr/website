@@ -17,7 +17,9 @@ const Work = () => {
         intro="A list of projects I've worked on or will work on.">
         <h2 className="text-2xl font-bold tracking-tight">Projects</h2>
         <p className="mt-2 text-base">Projects I worked on and will work on.</p>
-        <ul role="list" className="mt-12 grid gap-x-12 gap-y-16 grid-cols-2">
+        <ul
+          role="list"
+          className="mt-12 grid gap-x-12 gap-y-16 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
           {MyPastProjects.map((project) => (
             <motion.li
               key={project.title}
@@ -27,7 +29,7 @@ const Work = () => {
               <ProjectCard project={project} />
             </motion.li>
           ))}
-          {MyCurrentProjects.map((project) => (
+          {MyFreelanceProjects.map((project) => (
             <motion.li
               key={project.title}
               initial={ANIMATION_FROM_PROPS}
@@ -36,7 +38,7 @@ const Work = () => {
               <ProjectCard project={project} />
             </motion.li>
           ))}
-          {MyFreelanceProjects.map((project) => (
+          {MyCurrentProjects.map((project) => (
             <motion.li
               key={project.title}
               initial={ANIMATION_FROM_PROPS}

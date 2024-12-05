@@ -18,10 +18,9 @@ export const Name = "Dheeraj Vithalkar";
 
 export const About = (
   <>
-    {`I used to consider myself a software engineer, but the reality is that I simply enjoy creating things. If you'd like to get in touch,`}{" "}
-    <ExternalLink href="mailto:dheeraj@drjvtlkr.com">
-      send me an email.
-    </ExternalLink>
+    {`I used to consider myself a software engineer, but the reality is that I simply enjoy creating things. If you'd like to get in touch, `}
+    <ExternalLink href="mailto:dheeraj@drjvtlkr.com">email</ExternalLink>
+    {` me`}
   </>
 );
 
@@ -29,7 +28,7 @@ export const Meeting = (
   <>
     {`Schedule a call with me`}{" "}
     <ExternalLink href="https://calendly.com/dheerajrvithalkar/30min">
-      <SiGooglemeet/>
+      <SiGooglemeet />
     </ExternalLink>
   </>
 );
@@ -224,10 +223,11 @@ export const SocialMedia = [
     link: "https://www.instagram.com/drjvtlkr/",
     icon: FaInstagram,
   },
-  { 
-    name: "Github", 
-    link: "https://github.com/drjvtlkr", 
-    icon: FaGithub },
+  {
+    name: "Github",
+    link: "https://github.com/drjvtlkr",
+    icon: FaGithub,
+  },
   {
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/drjvtlkr",

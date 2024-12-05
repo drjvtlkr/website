@@ -34,18 +34,18 @@ export function Navbar() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/creating" passHref>
+              <Link href="/projects" passHref>
                 <ul
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    isActive("/creating") ? "text-pink-500" : "text-gray-500"
+                    isActive("/projects") ? "text-pink-500" : "text-gray-500"
                   )}>
-                  <span className="text-xl hover:text-black">Creating</span>
+                  <span className="text-xl hover:text-black">Projects</span>
                 </ul>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="https://cv.drjvtlkr.com" target="_blank" passHref>
+              <Link href="https://cv.drjvtlkr.com" passHref>
                 <ul
                   className={cn(
                     navigationMenuTriggerStyle(),

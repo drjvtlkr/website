@@ -5,7 +5,6 @@ import { About, Meeting, Name } from "./data/lifeApi";
 import Work from "@/components/Work";
 import { Resume } from "@/components/Resume";
 
-
 const Home = () => {
   return (
     <Container className="mt-8 sm:mt-16 md:mt-24 lg:mt-32 text-gray-600 transition-opacity duration-100">
@@ -28,7 +27,13 @@ const Home = () => {
             </div>
           </div>
           <div className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed animate-fadeInLeft">
-            <div className="px-4 sm:px-8 md:px-12 lg:px-16">{About}<br/>or<br/>{Meeting}</div>
+            <div className="px-4 sm:px-8 md:px-12 lg:px-16">
+              {About}
+              <br />
+              or
+              <br />
+              {Meeting}
+            </div>
           </div>
         </div>
 

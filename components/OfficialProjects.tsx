@@ -11,9 +11,11 @@ const OfficialProjects = () => {
       <PageLayout
         title="Things I've made trying to put my dent in the universe."
         intro="A list of projects I've worked on in my official work.">
-        <h2 className="text-2xl font-bold tracking-tight">Official</h2>
-        <p className="mt-2 text-base">Projects I worked on.</p>
-        <ul role="list" className="mt-12 grid gap-x-12 gap-y-16 grid-cols-2">
+        <h2 className="text-2xl font-bold tracking-tight">Projects</h2>
+        <p className="mt-2 text-base">I worked on.</p>
+        <ul
+          role="list"
+          className="mt-12 grid gap-x-12 gap-y-16 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2">
           {MyPastProjects.map((project) => (
             <motion.li
               key={project.title}
