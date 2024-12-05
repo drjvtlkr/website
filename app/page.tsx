@@ -40,6 +40,10 @@ const Home = () => {
         <div className="flex justify-center mt-8 sm:mt-10 md:mt-12 lg:mt-16">
           <Resume />
         </div>
+        {/* <div className="flex justify-center m-4 sm:mt-5 md:mt-6 lg:mt-8">
+          <p>Hello</p>
+          Changes in this part of the code when i am done learning python and fastapi to write about python and dsa and fast api
+        </div> */}
         <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-16">
           <Work />
         </div>

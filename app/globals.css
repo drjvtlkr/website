@@ -36,6 +36,12 @@ link,a{
   display: none;
 }
 
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
