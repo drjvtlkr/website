@@ -238,15 +238,17 @@ export const SocialMedia = [
 export const Work = [
   {
     company: "Orbit Technologys",
-    title: "Full Stack Developer",
+    title: "Full-Stack Developer",
     logo: orbitLogo,
-    start: "August 2023",
-    end: "Present",
+    role: "Intern",
+    start: "Oct 2023",
+    end: "Oct 2024",
   },
   {
     company: "Docyard Labs",
-    title: "Freelance Full Stack Developer",
+    title: "Full-Stack Developer",
     logo: docyardbgLogo,
+    role: "Freelance",
     start: "June 2024",
     end: "Present",
   },

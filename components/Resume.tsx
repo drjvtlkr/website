@@ -35,8 +35,10 @@ export const Resume = () => {
                 <time dateTime={role.end}>{role.end}</time>
               </dd>
               <dt className="sr-only">Role</dt>
-              <dd className="w-full text-xs text-zinc-500 dark:text-zinc-400">
+              <dd className="w-full text-xs text-black dark:text-zinc-400">
                 {role.title}
+                <br />
+                <span className="text-zinc-500">{role.role}</span>
               </dd>
             </dl>
           </li>
