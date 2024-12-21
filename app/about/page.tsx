@@ -1,5 +1,3 @@
-"use client";
-import { NextSeo } from "next-seo";
 import { Container } from "@/components/Container";
 import { ExternalLink } from "@/components/ExternalLink";
 import { PageTitle } from "@/components/PageTitle";
@@ -18,28 +16,20 @@ import {
   SocialMedia,
   AboutExtended,
 } from "../data/lifeApi";
+import { Metadata } from "next";
 
-const seoTitle = `About`;
-const seoDescription = `A few words about me.`;
+export const  metadata : Metadata= {
+  title: "About | ",
+  description:"A few words about me."
+}
+// https://youtu.be/a2ovCcxXqNo?t=500
+
 
 const About = () => {
   const randomQuote = useMemo(
     () => Quotes[Math.floor(Math.random() * Quotes.length)],
     []
   );
-
-  <NextSeo
-    title={seoTitle}
-    description={seoDescription}
-    canonical={`${process.env.NEXT_PUBLIC_URL}/about`}
-    openGraph={{
-      images: [
-        {
-          url: `${process.env.NEXT_PUBLIC_URL}/api/og?title=${seoTitle}&description=${seoDescription}`,
-        },
-      ],
-    }}
-  />;
 
   return (
     <>
