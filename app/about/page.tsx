@@ -19,11 +19,9 @@ import {
 import { Metadata } from "next";
 
 export const  metadata : Metadata= {
-  title: "About | ",
+  title: "About Me",
   description:"A few words about me."
 }
-// https://youtu.be/a2ovCcxXqNo?t=500
-
 
 const About = () => {
   const randomQuote = useMemo(

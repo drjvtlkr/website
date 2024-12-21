@@ -12,13 +12,13 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.URL}`),
   title: "Dheeraj Vithalkar",
-  description: "Website",
+  description: "Portfolio Website",
   openGraph:{
-    title: "Dheeraj Vithalkar",
-    description:"My Portfolio Website",
+    title: "Dheeraj Vithalkar | Above and beyond a Full-stack Engineer",
+    description: "Take a look at my : Portfolio Website | Work Repository | Website",
     type:"website",
     locale:"en_US",
-    url: process.env.URL,
+    url: `${process.env.URL}`,
     siteName:"Portfolio Website"
   }
 };

@@ -1,4 +1,4 @@
-"use client"; // Marking as a client-side component
+"use client";
 
 import { useState, useEffect } from "react";
 import Loader from "@/components/Loader";
