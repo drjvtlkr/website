@@ -1,16 +1,17 @@
-import { ExternalLink } from "../../components/ExternalLink";
+import { ExternalLink } from "@/components/ExternalLink";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { SiGooglemeet } from "react-icons/si";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import dhongadiLogo from "../../images/dhongadi.jpg";
-import logoLgLogo from "../../images/logoLg.png";
-import depandaLogo from "../../images/depanda.png";
-import edmentorLogo from "../../images/edmentor.png";
-import orbitLogo from "../../images/orbit.png";
-import docyardbgLogo from "../../images/docyardbg.png";
-import githubLogo from "../../images/github.png";
-import founderslistLogo from "../../images/founderslist.png";
+import dhongadiLogo from "@/images/dhongadi.jpg";
+import logoLgLogo from "@/images/logoLg.png";
+import depandaLogo from "@/images/depanda.png";
+import edmentorLogo from "@/images/edmentor.png";
+import orbitLogo from "@/images/orbit.png";
+import docyardbgLogo from "@/images/docyardbg.png";
+import githubLogo from "@/images/github.png";
+import apexLogo from "@/images/apex.png"
+import founderslistLogo from "@/images/founderslist.png";
 import { FaLinkedin } from "react-icons/fa";
 import { StaticImageData } from "next/image";
 
@@ -213,7 +214,7 @@ export const MyFreelanceProjects: Project[] = [
   {
     title: "Apex Engineering Technologies",
     techStack: [
-      "Lead Fullstack Developer",
+      "Lead Fullstack Engineer",
       "From scratch",
       "TypeScript",
       "React",
@@ -222,7 +223,7 @@ export const MyFreelanceProjects: Project[] = [
     ],
     description:
       "Apex Engineering Technologies are a leading manufacturer in producing heavy duty machines in Sugar Industry in India",
-    logo: dhongadiLogo,
+    logo: apexLogo,
     link: {
       label: "Apex Engg Tech",
       href: "https://apexenggtech.com",

@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Starter from "./Starter";
-import { Analytics } from "@vercel/analytics/react"
-import { GoogleTagManager } from '@next/third-parties/google'
-
+import { Analytics } from "@vercel/analytics/react";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -16,14 +14,15 @@ export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.URL}`),
   title: "Dheeraj Vithalkar",
   description: "Portfolio Website",
-  openGraph:{
+  openGraph: {
     title: "Dheeraj Vithalkar | Above and beyond a Full-stack Engineer",
-    description: "Take a look at my : Portfolio Website | Work Repository | Website",
-    type:"website",
-    locale:"en_US",
+    description:
+      "Take a look at my : Portfolio Website | Work Repository | Website",
+    type: "website",
+    locale: "en_US",
     url: `${process.env.URL}`,
-    siteName:"Portfolio Website"
-  }
+    siteName: "Portfolio Website",
+  },
 };
 
 export default function RootLayout({
@@ -36,7 +35,6 @@ export default function RootLayout({
       <body className={`${roboto.className} antialiased`}>
         <Starter>{children}</Starter>
         <Analytics />
-        <GoogleTagManager  gtmId="G-VF6FMKC0Y5"/>
       </body>
     </html>
   );
