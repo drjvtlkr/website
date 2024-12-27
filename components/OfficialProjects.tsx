@@ -23,7 +23,7 @@ const OfficialProjects = () => {
               initial={ANIMATION_FROM_PROPS}
               whileInView={ANIMATION_TO_PROPS}
               viewport={{ once: true }}
-              onClick={() => sendGAEvent('event', 'buttonClicked', { value: 'vf6fmkc0y5' })}>
+              onClick={() => sendGAEvent('event', 'buttonClicked', { value: 'VF6FMKC0Y5' })}>
               <ProjectCard project={project} />
             </motion.li>
           ))}

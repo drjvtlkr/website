@@ -210,6 +210,24 @@ export const MyFreelanceProjects: Project[] = [
       href: "https://alkaline-admin.vercel.app/",
     },
   },
+  {
+    title: "Apex Engineering Technologies",
+    techStack: [
+      "Lead Fullstack Developer",
+      "From scratch",
+      "TypeScript",
+      "React",
+      "Next JS",
+      "Web analytics",
+    ],
+    description:
+      "Apex Engineering Technologies are a leading manufacturer in producing heavy duty machines in Sugar Industry in India",
+    logo: dhongadiLogo,
+    link: {
+      label: "Apex Engg Tech",
+      href: "https://apexenggtech.com",
+    },
+  },
 ];
 
 export const SocialMedia = [
