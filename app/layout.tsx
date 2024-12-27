@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Starter from "./Starter";
+import { Analytics } from "@vercel/analytics/react"
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.className} antialiased`}>
         <Starter>{children}</Starter>
+        <Analytics />
       </body>
     </html>
   );
