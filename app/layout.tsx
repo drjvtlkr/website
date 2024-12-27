@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Starter from "./Starter";
 import { Analytics } from "@vercel/analytics/react"
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 
 const roboto = Roboto({
@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={`${roboto.className} antialiased`}>
         <Starter>{children}</Starter>
         <Analytics />
-        <GoogleAnalytics gaId="G-VF6FMKC0Y5"/>
+        <GoogleTagManager gtmId="G-VF6FMKC0Y5"/>
       </body>
     </html>
   );
