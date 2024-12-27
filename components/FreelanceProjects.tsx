@@ -4,6 +4,7 @@ import { MyFreelanceProjects } from "@/app/data/lifeApi";
 import { PageLayout } from "./PageLayout";
 import { ProjectCard } from "./ProjectCard";
 import { ANIMATION_FROM_PROPS, ANIMATION_TO_PROPS } from "@/lib/animations";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const FreelanceProjects = () => {
   return (
@@ -20,7 +21,8 @@ const FreelanceProjects = () => {
               key={project.title}
               initial={ANIMATION_FROM_PROPS}
               whileInView={ANIMATION_TO_PROPS}
-              viewport={{ once: true }}>
+              viewport={{ once: true }}
+              onClick={() => sendGAEvent('event', 'buttonClicked', { value: 'vf6fmkc0y5' })}>
               <ProjectCard project={project} />
             </motion.li>
           ))}
