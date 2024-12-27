@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={`${roboto.className} antialiased`}>
         <Starter>{children}</Starter>
         <Analytics />
-        <GoogleTagManager gtmId="G-VF6FMKC0Y5"/>
+        <GoogleTagManager  gtmId="G-VF6FMKC0Y5"/>
       </body>
     </html>
   );
