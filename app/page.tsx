@@ -29,12 +29,11 @@ const Home = () => {
           <div className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed animate-fadeInLeft">
             <div className="px-4 sm:px-8 md:px-12 lg:px-16">
               {About}
-              <br />
-              or
-              <br />
-              {Meeting}
             </div>
           </div>
+        </div>
+        <div className="flex justify-center gap-3 items-center underline mt-8 sm:mt-10 md:mt-12 lg:mt-16">
+          {Meeting}
         </div>
 
         <div className="flex justify-center mt-8 sm:mt-10 md:mt-12 lg:mt-16">

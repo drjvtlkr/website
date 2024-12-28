@@ -50,7 +50,7 @@ export type Project = {
 export const MyCurrentProjects: Project[] = [
   {
     title: "Drjvtlkr.com",
-    techStack: ["Personal Project", "Next.js"],
+    techStack: ["Personal Project", "Next.js", "shad cn", "Web analytics"],
     description:
       "My personal website you are currently on, built with Next.js.",
     logo: logoLgLogo,
