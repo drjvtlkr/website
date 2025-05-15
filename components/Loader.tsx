@@ -11,8 +11,6 @@ const Loader = ({ onLoaded }: { onLoaded: () => void }) => {
       new Typed(typedElement.current, {
         strings: [
           "Dheeraj Vithalkar",
-          "Software Engineer",
-          "Fullstack Engineer",
           "Product Engineer",
         ],
         typeSpeed: 30,

@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   title: "Dheeraj Vithalkar",
   description: "Portfolio Website",
   openGraph: {
-    title: "Dheeraj Vithalkar | Above and beyond a Full-stack Engineer",
+    title: "Dheeraj Vithalkar | Growth Partner for Local Businesses ",
     description:
-      "Take a look at my : Portfolio Website | Work Repository | Website",
+      "Helping Local Businesses Grow to their Full Potential",
     type: "website",
     locale: "en_US",
     url: `${process.env.URL}`,

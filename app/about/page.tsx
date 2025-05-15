@@ -18,10 +18,10 @@ import {
 } from "../data/lifeApi";
 import { Metadata } from "next";
 
-export const  metadata : Metadata= {
+export const metadata: Metadata = {
   title: "About Me",
-  description:"A few words about me."
-}
+  description: "A few words about me.",
+};
 
 const About = () => {
   const randomQuote = useMemo(
@@ -68,14 +68,16 @@ const About = () => {
                   focused on developing Fullstack Applications with great user
                   experiences using React and NextJS.
                   <br />
+                  <br />I have created multiple Fullstack applications from
+                  scratch for companies I worked and now, outside of it as a
+                  Growth Partner to <strong>Help Local Businesses take that Leap of Faith, by
+                  getting them more reach on the Web.</strong>
                   <br />
-                  I have been interested in building sophisticated backends
-                  using Golang and Rust. Although Rust has been giving me some
-                  hard time learning it, Golang has defiently been the one with
-                  better learning curve.
+                  <br></br>
+                  I have been interested in building Businesses myself, this is
+                  my journey of reaching that goal through small, calculated and
+                  consistent steps.
                   <br />
-                  <br />I created multiple Fullstack applications from scratch
-                  for companies I worked and outside of it as a Freelancer.
                 </div>
               </Section>
               <Section>

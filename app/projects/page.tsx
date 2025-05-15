@@ -66,8 +66,6 @@ const Projects = () => {
                   <Typewriter
                     options={{
                       strings: [
-                        "Fullstack Engineer",
-                        "Software Engineer",
                         "Product Engineer",
                       ],
                       autoStart: true,

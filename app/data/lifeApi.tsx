@@ -34,7 +34,7 @@ export const Meeting = (
   </>
 );
 
-export const AboutExtended = `I live in Hubli, India, having grown up in the small city of Hubli-Dharwad. I have a bachelor's degree in Computer Science and Engineering from SDM College Of Engineering and Technology. I like Programming, Video Editing, Social Media Management and travelling across my country India. The cosmos fascinates me, and I take great delight in gazing at the stars.`;
+export const AboutExtended = `I live in Hubli, India, having grown up in the small city of Hubli-Dharwad. Having earned my Bachelor's degree in Computer Science and Engineering from SDM College Of Engineering and Technology, I started Freelancing to help Local Businesses Achieve their full Potential. I like Programming, Video Editing, Social Media Management and travelling across my country India. The cosmos fascinates me, and I take great delight in gazing at the stars.`;
 
 export type Project = {
   title: string;
@@ -69,26 +69,26 @@ export const MyCurrentProjects: Project[] = [
       href: "https://cv.drjvtlkr.com",
     },
   },
-  {
-    title: "Founderslist.",
-    techStack: [" Personal Project", "Next.js", "From Scratch"],
-    description: "One stop shop of Gen-Z founders.",
-    logo: founderslistLogo,
-    link: {
-      label: "Founderslist",
-      href: "https://github.com/drjvtlkr/FoundersList",
-    },
-  },
-  {
-    title: "Redis DB",
-    techStack: [" Personal Project", "Golang", "Database Architecture"],
-    description: "Clone of wellknown DataBase RedisDB.",
-    logo: githubLogo,
-    link: {
-      label: "redis clone",
-      href: "https://github.com/drjvtlkr/redis-clone",
-    },
-  },
+  // {
+  //   title: "Founderslist.",
+  //   techStack: [" Personal Project", "Next.js", "From Scratch"],
+  //   description: "One stop shop of Gen-Z founders.",
+  //   logo: founderslistLogo,
+  //   link: {
+  //     label: "Founderslist",
+  //     href: "https://github.com/drjvtlkr/FoundersList",
+  //   },
+  // },
+  // {
+  //   title: "Redis DB",
+  //   techStack: [" Personal Project", "Golang", "Database Architecture"],
+  //   description: "Clone of wellknown DataBase RedisDB.",
+  //   logo: githubLogo,
+  //   link: {
+  //     label: "redis clone",
+  //     href: "https://github.com/drjvtlkr/redis-clone",
+  //   },
+  // },
   {
     title: "Google Docs",
     techStack: [" Personal Project", "Next JS", "Realtime"],
@@ -194,6 +194,24 @@ export const MyPastProjects: Project[] = [
 
 export const MyFreelanceProjects: Project[] = [
   {
+    title: "Abhish Engg Works",
+    techStack: [
+      "Lead Fullstack Engineer",
+      "From scratch",
+      "TypeScript",
+      "React",
+      "Next JS",
+      "Web analytics",
+    ],
+    description:
+      "Abhish Engg Works are a leading manufacturers of heavy duty machines in Sugar Industry.",
+    logo: apexLogo,
+    link: {
+      label: "Abhishek Engg Works",
+      href: "https://abhishengg.com",
+    },
+  },
+  {
     title: "Dhongadi Alkaline Waters",
     techStack: [
       "Lead Fullstack Developer",
@@ -211,24 +229,6 @@ export const MyFreelanceProjects: Project[] = [
       href: "https://alkaline-admin.vercel.app/",
     },
   },
-  {
-    title: "Apex Engineering Technologies",
-    techStack: [
-      "Lead Fullstack Engineer",
-      "From scratch",
-      "TypeScript",
-      "React",
-      "Next JS",
-      "Web analytics",
-    ],
-    description:
-      "Apex Engineering Technologies are a leading manufacturer in producing heavy duty machines in Sugar Industry in India",
-    logo: apexLogo,
-    link: {
-      label: "Apex Engg Tech",
-      href: "https://apexenggtech.com",
-    },
-  },
 ];
 
 export const SocialMedia = [
@@ -236,11 +236,6 @@ export const SocialMedia = [
     name: "Twitter",
     link: "https://twitter.com/drjvtlkr",
     icon: FaSquareXTwitter,
-  },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/drjvtlkr/",
-    icon: FaInstagram,
   },
   {
     name: "Github",
