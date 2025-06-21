@@ -6,6 +6,7 @@ import OfficialProjects from "@/components/OfficialProjects";
 import PersonalProjects from "@/components/PersonalProjects";
 import FreelanceProjects from "@/components/FreelanceProjects";
 import Typewriter from "typewriter-effect";
+import Head from "next/head";
 
 const Projects = () => {
   const officialRef = useRef<HTMLDivElement>(null);
@@ -45,6 +46,22 @@ const Projects = () => {
 
   return (
     <>
+    <Head>
+<title>Projects – Dheeraj Vithalkar</title>
+        <meta name="description" content="Learn more about Dheeraj Vithalkar, his mission and work." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProjectsPage",
+              "name": "Projects",
+              "url": "https://drjvtlkr.com/projects",
+              "description": "Learn more about Dheeraj Vithalkar, his mission and approach to building websites for modern businesses."
+            })
+          }}
+        />
+    </Head>
       <Container className="mt-8 sm:mt-16 md:mt-24 lg:mt-32 text-gray-600">
         <div className="mx-auto max-w-4xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl lg:px-8 bg-gray-50 border p-6 sm:p-8 md:p-10 rounded-xl">
           <div className="grid grid-cols-1 gap-y-8 md:gap-y-12 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">

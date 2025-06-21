@@ -17,6 +17,7 @@ import {
   AboutExtended,
 } from "../data/lifeApi";
 import { Metadata } from "next";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "About Me",
@@ -31,6 +32,22 @@ const About = () => {
 
   return (
     <>
+    <Head>
+      <title>About – Dheeraj Vithalkar</title>
+        <meta name="description" content="Learn more about Dheeraj Vithalkar, his mission and work." />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AboutPage",
+              "name": "About",
+              "url": "https://drjvtlkr.com/about",
+              "description": "Learn more about Dheeraj Vithalkar, his mission and approach to building websites for modern businesses."
+            })
+          }}
+        />
+    </Head>
       <Container className="mt-16 sm:mt-32 text-gray-600">
         <div className="mx-auto max-w-7xl lg:px-8 bg-gray-50 border p-10 rounded-xl">
           <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
