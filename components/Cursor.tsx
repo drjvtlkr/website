@@ -5,63 +5,60 @@ import { gsap } from "gsap";
 const Cursor = () => {
   useEffect(() => {
     const cursor = document.getElementById("custom-cursor");
-    const links = document.querySelectorAll("a");
-    const cursorText = document.querySelector(".cursor-text") as HTMLElement;
-    const centerX = window.innerWidth/2;
-    const centerY = window.innerHeight/2;
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
 
     const cursorTransitionDuration = 0.25;
+    let inactivityTimeout: NodeJS.Timeout;
 
     const onMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event;
-      gsap.to(cursor, { x: clientX, y: clientY, duration: cursorTransitionDuration, ease:"power2.out"});
+      gsap.to(cursor, {
+        x: clientX,
+        y: clientY,
+        scale: 2,
+        duration: cursorTransitionDuration,
+        ease: "power2.out",
+      });
+
+      clearTimeout(inactivityTimeout);
+      inactivityTimeout = setTimeout(() => {
+        gsap.to(cursor, {
+          scale: 1,
+          duration: cursorTransitionDuration,
+          ease: "power2.out",
+        });
+      }, 1000);
     };
 
-    const onMouseEnterLink = (event: MouseEvent) => {
-      const link = event.target as HTMLElement;
-      if (link.classList.contains("view")) {
-        gsap.to(cursor, { scale: 4 ,duration: cursorTransitionDuration, ease:"power2.out"});
-        cursorText.style.display = "block";
-      } else {
-        gsap.to(cursor, { scale: 4, duration: cursorTransitionDuration,ease:"power2.out" });
-      }
+    const onWindowBlur = () => {
+      gsap.to(cursor, {
+        scale: 1,
+        duration: cursorTransitionDuration,
+        x: centerX,
+        y: centerY,
+        ease: "power2.out",
+      });
     };
 
-    const onMouseLeaveLink = () => {
-      gsap.to(cursor, { scale: 4, duration: cursorTransitionDuration, ease:"power2.out" });
-      cursorText.style.display = "none";
+    const onWindowFocus = () => {
+      gsap.to(cursor, { duration: cursorTransitionDuration, scale: 1, ease: "power2.out" });
     };
-
-    const onWindowBlur =()=>{
-        gsap.to(cursor, {scale:4, duration:cursorTransitionDuration, x:centerX, y:centerY,ease:"power2.out"})
-    }
-
-    const onWindowFocus = ()=>{
-        gsap.to(cursor,{duration:cursorTransitionDuration, scale: 4, ease:"power2.out"})
-    }
 
     document.addEventListener("mousemove", onMouseMove);
-    links.forEach((link) => {
-      link.addEventListener("mouseenter", onMouseEnterLink);
-      link.addEventListener("mouseleave", onMouseLeaveLink);
-    });
     window.addEventListener("blur", onWindowBlur);
-    window.addEventListener("focus", onWindowFocus)
+    window.addEventListener("focus", onWindowFocus);
 
     return () => {
-        document.removeEventListener("mousemove", onMouseMove);
-        links.forEach((link) => {
-          link.removeEventListener("mouseenter", onMouseEnterLink);
-          link.removeEventListener("mouseleave", onMouseLeaveLink);
-        });
-        window.removeEventListener("blur", onWindowBlur);
-        window.removeEventListener("focus", onWindowFocus);
-      };
-    }, []);
+      document.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("blur", onWindowBlur);
+      window.removeEventListener("focus", onWindowFocus);
+      clearTimeout(inactivityTimeout);
+    };
+  }, []);
 
   return (
     <div id="custom-cursor" className="custom-cursor">
-      <span className="cursor-text">Cursor</span>
     </div>
   );
 };

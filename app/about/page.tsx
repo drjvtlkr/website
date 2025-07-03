@@ -32,22 +32,31 @@ const About = () => {
 
   return (
     <>
-    <Head>
-      <title>About – Dheeraj Vithalkar</title>
-        <meta name="description" content="Learn more about Dheeraj Vithalkar, his mission and work." />
+      <Head>
+        <title>About – Dheeraj Vithalkar</title>
+        <meta
+          name="description"
+          content="Learn more about Dheeraj Vithalkar, his mission and work."
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "AboutPage",
-              "name": "About",
-              "url": "https://drjvtlkr.com/about",
-              "description": "Learn more about Dheeraj Vithalkar, his mission and approach to building websites for modern businesses."
-            })
+              name: "About Dheeraj Vithalkar",
+              url: "https://drjvtlkr.com/about",
+              potentialAction: {
+                "@type": "SearchAction",
+                "target": "{search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+              description:
+                "Learn more about Dheeraj Vithalkar, his mission and approach to building websites for modern businesses.",
+            }),
           }}
         />
-    </Head>
+      </Head>
       <Container className="mt-16 sm:mt-32 text-gray-600">
         <div className="mx-auto max-w-7xl lg:px-8 bg-gray-50 border p-10 rounded-xl">
           <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -87,8 +96,11 @@ const About = () => {
                   <br />
                   <br />I have created multiple Fullstack applications from
                   scratch for companies I worked and now, outside of it as a
-                  Growth Partner to <strong>Help Local Businesses take that Leap of Faith, by
-                  getting them more reach on the Web.</strong>
+                  Growth Partner to{" "}
+                  <strong>
+                    Help Local Businesses take that Leap of Faith, by getting
+                    them more reach on the Web.
+                  </strong>
                   <br />
                   <br></br>
                   I have been interested in building Businesses myself, this is
